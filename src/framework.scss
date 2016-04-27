@@ -1,0 +1,193 @@
+@import 'colors';
+// @import 'opensans';
+
+* {
+    margin:0px;
+    padding:0px;
+    font-family:OpenSans, tahoma, verdana, sans-serif;
+    font-size:14px;
+    font-weight:normal;
+    z-index:0;
+    text-align:left;
+    color:#1F272C;
+
+    -moz-user-select:none;
+    -webkit-user-select:none;
+    -ms-user-select:none;
+
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+	display: flex;
+	flex-direction: row;
+	height:100%;
+	max-height: 100vh;
+	min-height: 100vh;
+}
+
+.leftframe,
+.centerframe,
+.rightframe {
+	display: flex;
+	height:100%;
+	max-height: 100vh;
+	min-height: 100vh;
+	flex-direction: column;
+}
+
+.leftframe {
+    width:400px;
+    border-right: 1px solid #C0E9FD;
+	animation: 0.5s fadein;
+}
+
+@keyframes fadein {
+	from { opacity: 0; }
+	to { opacity: 1; }
+}
+
+.centerframe {
+	width:100%;
+	flex: 1;
+	overflow: none;
+}
+
+.rightframe {
+	display:none;
+}
+
+.panel {
+	display: flex;
+	flex:2;
+	background-color: #F2F6F9;
+}
+
+.panelcontent {
+	flex:1;
+	overflow-x:auto;
+}
+
+
+
+.pickerheaderprimary,
+.pickerheadersecondary,
+.pickerheadertertiary {
+	display: flex;
+	flex-direction: row;
+}
+
+.pickerheaderprimary:hover,
+.pickerheadersecondary:hover,
+.pickerheadertertiary:hover {
+	cursor: pointer;
+}
+
+.pickerheaderprimary {
+    background-color: #73D1FF;
+    height:44px;
+    flex:0 0 44px;
+}
+
+.pickerheadersecondary {
+    background-color: #9BDDFF;
+    height:40px;
+    flex:0 0 40px;
+}
+
+.pickerheadertertiary {
+    background-color: #C0E9FD;
+    height:36px;
+    flex:0 0 36px;
+}
+
+.pickerheaderprimary .icon,
+.pickerheadersecondary .icon,
+.pickerheadertertiary .icon {
+	display: flex;
+	text-align: center;
+	vertical-align: middle;
+	height:100%;
+	width:44px;
+}
+
+.pickerheaderprimary .icon svg,
+.pickerheadersecondary .icon svg,
+.pickerheadertertiary .icon svg {
+	margin: auto;
+}
+
+
+.pickerheaderprimary .icon,
+.pickerheaderprimary .icon svg {
+	fill:#005782;
+	color:#005782;
+}
+
+.pickerheadersecondary .icon,
+.pickerheadersecondary .icon svg {
+	fill:#006498;
+	color:#006498;
+}
+
+.pickerheadertertiary .icon,
+.pickerheadertertiary .icon svg {
+	fill:#0071AA;
+	color:#0071AA;
+}
+
+.pickerheaderprimary .title,
+.pickerheadersecondary .title,
+.pickerheadertertiary .title {
+	display: flex;
+	flex: 1;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	text-align: left;
+	height:100%;
+}
+
+.pickerheaderprimary .title {
+	color:#005782;
+	font-size:24px;
+	padding-top:4px;
+}
+
+.pickerheadersecondary .title {
+	color:#006498;
+	font-size:20px;
+	padding-top:6px;
+}
+
+.pickerheadertertiary .title {
+	color:#0071AA;
+	font-size:16px;
+	padding-top:8px;
+}
+
+.pickerheaderprimary .chevron,
+.pickerheadersecondary .chevron,
+.pickerheadertertiary .chevron {
+	display: flex;
+	text-align: right;
+	vertical-align: middle;
+	height:100%;
+	width:44px;
+}
+
+.pickerheaderprimary .chevron svg,
+.pickerheadersecondary .chevron svg,
+.pickerheadertertiary .chevron svg {
+	margin: auto;
+}
+
+.pickerheaderprimary .chevron svg { fill:#49C4FF; }
+.pickerheadersecondary .chevron svg { fill:#73D1FF; }
+.pickerheadertertiary .chevron svg { fill:#9BDDFF; }
+
+.pickerheaderprimary:hover .chevron svg { fill:#005782; }
+.pickerheadersecondary:hover .chevron svg { fill:#006498; }
+.pickerheadertertiary:hover .chevron svg { fill:#0071AA; }
