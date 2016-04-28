@@ -38,6 +38,8 @@ body {
 	flex: 1;
 	overflow: none;
     background-color: white;
+    padding:20px;
+    color: $gray-l50;
 }
 
 .rightframe {
@@ -173,9 +175,9 @@ body {
 	margin: auto;
 }
 
-.pickerheaderprimary .chevron svg { fill: $blue-l75; }
-.pickerheadersecondary .chevron svg { fill:$blue-l80; }
-.pickerheadertertiary .chevron svg { fill: $blue-l85; }
+.pickerheaderprimary .chevron svg { fill: $blue-l70; }
+.pickerheadersecondary .chevron svg { fill:$blue-l75; }
+.pickerheadertertiary .chevron svg { fill: $blue-l80; }
 
 .pickerheaderprimary:hover .chevron svg { fill: $blue-l35; }
 .pickerheadersecondary:hover .chevron svg { fill: $blue-l40; }
