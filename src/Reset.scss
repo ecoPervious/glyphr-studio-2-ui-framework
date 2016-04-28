@@ -1,3 +1,5 @@
+@import 'Colors';
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -14,7 +16,6 @@ table, caption, tbody, tfoot, thead, tr, th, td {
   font-weight: inherit;
   font-style: inherit;
   font-size: 100%;
-  font-family: inherit;
   vertical-align: baseline;
   box-sizing: border-box;
 
@@ -31,37 +32,58 @@ button, input {
 
 body {
   line-height: 1;
-  color: black;
-  background: white;
+  color: $gray-l05;
+  background: $offwhite;
   height: 100%;
-
 }
 
 ol, ul {
   list-style: none;
-
 }
 
 /* tables still need 'cellspacing="0"' in the markup */
 table {
   border-collapse: separate;
   border-spacing: 0;
-
 }
 
 caption, th, td {
   text-align: left;
   font-weight: normal;
-
 }
 
 blockquote:before, blockquote:after,
 q:before, q:after {
   content: "";
-
 }
 
 blockquote, q {
   quotes: "" "";
+}
 
+
+/* WEBKIT SCROLLBAR */
+::-webkit-scrollbar {
+    height: 5px;
+    width: 5px;
+    background: $offwhite;
+}
+
+::-webkit-scrollbar-button {
+
+}
+
+::-webkit-scrollbar-track,
+::-webkit-scrollbar-track-piece {
+}
+
+::-webkit-scrollbar-thumb {
+    background: $gray-l85;
+    border-radius: 2px;
+    margin:2px;
+}
+
+::-webkit-scrollbar-corner,
+::-webkit-resizer {
+    background: $offwhite;
 }

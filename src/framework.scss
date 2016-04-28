@@ -1,5 +1,6 @@
 @import 'Colors';
 @import 'OpenSans';
+@import 'OpenSansLight';
 @import 'Reset';
 
 body {
@@ -23,6 +24,7 @@ body {
 .leftframe {
     width:400px;
     border-right: 1px solid $blue-l90;
+    border-bottom: 2px solid $blue-l90;
 	animation: 0.5s fadein;
 }
 
@@ -35,6 +37,7 @@ body {
 	width:100%;
 	flex: 1;
 	overflow: none;
+    background-color: white;
 }
 
 .rightframe {
@@ -50,6 +53,9 @@ body {
 .panelcontent {
 	flex:1;
 	overflow-x:auto;
+    padding: 10px 4px 20px 12px;
+    color: $gray-l30;
+    font-size:.87em;
 }
 
 
@@ -59,7 +65,6 @@ body {
 .pickerheadertertiary {
 	display: flex;
 	flex-direction: row;
-    font-family: OpenSansLight;
 }
 
 .pickerheaderprimary:hover,
@@ -131,24 +136,25 @@ body {
 	text-overflow: ellipsis;
 	text-align: left;
 	height:100%;
+    font-family: OpenSansLight;
 }
 
 .pickerheaderprimary .title {
 	color: $blue-l35;
 	font-size:24px;
-	padding-top:4px;
+	padding-top:10px;
 }
 
 .pickerheadersecondary .title {
 	color: $blue-l40;
 	font-size:20px;
-	padding-top:6px;
+	padding-top:10px;
 }
 
 .pickerheadertertiary .title {
 	color: $blue-l45;
 	font-size:16px;
-	padding-top:8px;
+	padding-top:10px;
 }
 
 .pickerheaderprimary .chevron,
