@@ -1,0 +1,49 @@
+@import 'Colors';
+
+.panel {
+	display: flex;
+	flex:2;
+	background-color: $offwhite;
+}
+
+.panelcontent {
+	flex:1;
+	overflow-x:auto;
+    padding: 10px 4px 20px 12px;
+    color: $gray-l30;
+    font-size:.87em;
+    
+}
+
+.sections {
+    padding: 0px;
+    
+    button {
+        display: block;
+        width: 100%;
+        padding: 12px 4px 12px 40px;
+        font-size: 1.2em;
+        color: $gray-l50;
+        text-align: left;
+        background-color: $offwhite;
+        border-left: 4px solid $offwhite;
+        margin-top: 8px;
+        
+        &:hover {
+            background-color: $blue-l95;
+            color: $blue-l50;
+            border-left-color: $blue-l80;
+        } 
+    }
+
+    .selected {
+        color: $blue-l60;
+        border-left: 4px solid $blue-l80;
+        
+        &:hover {
+            color: $blue-l60;
+            cursor: default;
+            background-color: $offwhite;
+        } 
+    }        
+}

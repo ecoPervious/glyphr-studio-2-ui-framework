@@ -2,18 +2,10 @@
 @import 'OpenSans';
 @import 'OpenSansLight';
 @import 'Reset';
+@import 'Pickerheader';
+@import 'Panel';
 
-body {
-	display: flex;
-	flex-direction: row;
-	height:100%;
-	max-height: 100vh;
-	min-height: 100vh;
-}
-
-.leftframe,
-.centerframe,
-.rightframe {
+.flexframe {
 	display: flex;
 	height:100%;
 	max-height: 100vh;
@@ -21,7 +13,13 @@ body {
 	flex-direction: column;
 }
 
+body {
+	@extend .flexframe;
+	flex-direction: row;
+}
+
 .leftframe {
+	@extend .flexframe;
     width:400px;
     border-right: 1px solid $blue-l90;
     border-bottom: 2px solid $blue-l90;
@@ -34,6 +32,7 @@ body {
 }
 
 .centerframe {
+	@extend .flexframe;
 	width:100%;
 	flex: 1;
 	overflow: none;
@@ -43,142 +42,6 @@ body {
 }
 
 .rightframe {
+	@extend .flexframe;
 	display:none;
 }
-
-.panel {
-	display: flex;
-	flex:2;
-	background-color: $offwhite;
-}
-
-.panelcontent {
-	flex:1;
-	overflow-x:auto;
-    padding: 10px 4px 20px 12px;
-    color: $gray-l30;
-    font-size:.87em;
-}
-
-
-
-.pickerheaderprimary,
-.pickerheadersecondary,
-.pickerheadertertiary {
-	display: flex;
-	flex-direction: row;
-}
-
-.pickerheaderprimary:hover,
-.pickerheadersecondary:hover,
-.pickerheadertertiary:hover {
-	cursor: pointer;
-}
-
-.pickerheaderprimary {
-    background-color: $blue-l80;
-    height:44px;
-    flex:0 0 44px;
-}
-
-.pickerheadersecondary {
-    background-color: $blue-l85;
-    height:40px;
-    flex:0 0 40px;
-}
-
-.pickerheadertertiary {
-    background-color: $blue-l90;
-    height:36px;
-    flex:0 0 36px;
-}
-
-.pickerheaderprimary .icon,
-.pickerheadersecondary .icon,
-.pickerheadertertiary .icon {
-	display: flex;
-	text-align: center;
-	vertical-align: middle;
-	height:100%;
-	width:44px;
-}
-
-.pickerheaderprimary .icon svg,
-.pickerheadersecondary .icon svg,
-.pickerheadertertiary .icon svg {
-	margin: auto;
-}
-
-
-.pickerheaderprimary .icon,
-.pickerheaderprimary .icon svg {
-	fill: $blue-l35;
-	color: $blue-l35;
-}
-
-.pickerheadersecondary .icon,
-.pickerheadersecondary .icon svg {
-	fill: $blue-l40;
-	color: $blue-l40;
-}
-
-.pickerheadertertiary .icon,
-.pickerheadertertiary .icon svg {
-	fill: $blue-l45;
-	color: $blue-l45;
-}
-
-.pickerheaderprimary .title,
-.pickerheadersecondary .title,
-.pickerheadertertiary .title {
-	display: flex;
-	flex: 1;
-	overflow: hidden;
-	white-space: nowrap;
-	text-overflow: ellipsis;
-	text-align: left;
-	height:100%;
-    font-family: OpenSansLight;
-}
-
-.pickerheaderprimary .title {
-	color: $blue-l35;
-	font-size:24px;
-	padding-top:10px;
-}
-
-.pickerheadersecondary .title {
-	color: $blue-l40;
-	font-size:20px;
-	padding-top:10px;
-}
-
-.pickerheadertertiary .title {
-	color: $blue-l45;
-	font-size:16px;
-	padding-top:10px;
-}
-
-.pickerheaderprimary .chevron,
-.pickerheadersecondary .chevron,
-.pickerheadertertiary .chevron {
-	display: flex;
-	text-align: right;
-	vertical-align: middle;
-	height:100%;
-	width:44px;
-}
-
-.pickerheaderprimary .chevron svg,
-.pickerheadersecondary .chevron svg,
-.pickerheadertertiary .chevron svg {
-	margin: auto;
-}
-
-.pickerheaderprimary .chevron svg { fill: $blue-l70; }
-.pickerheadersecondary .chevron svg { fill:$blue-l75; }
-.pickerheadertertiary .chevron svg { fill: $blue-l80; }
-
-.pickerheaderprimary:hover .chevron svg { fill: $blue-l35; }
-.pickerheadersecondary:hover .chevron svg { fill: $blue-l40; }
-.pickerheadertertiary:hover .chevron svg { fill: $blue-l45; }

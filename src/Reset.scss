@@ -2,7 +2,7 @@
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
+a, abbr, acronym, address, big, button, cite, code,
 del, dfn, em, font, img, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var,
 dl, dt, dd, ol, ul, li,
@@ -26,8 +26,19 @@ table, caption, tbody, tfoot, thead, tr, th, td {
   outline: 0;
 }
 
-button, input {
+button {
   outline: none;
+  background-color: $blue-l40;
+  border: 0;
+  color: $blue-l90;
+  border-radius: 3px;
+  padding:4px 12px;
+  margin-bottom: 2px;
+  
+  &:hover { 
+    color: $offwhite;
+    cursor: pointer;
+  }
 }
 
 body {
