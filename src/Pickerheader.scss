@@ -1,9 +1,21 @@
 @import 'Colors';
 @import 'Reset';
+@import 'PickerPopup';
 
 .pickerheader {
 	display: flex;
 	flex-direction: row;
+
+    .pickerpopup {
+        @extend .pickerpopup;
+        display: none;
+    }
+
+    &:hover {
+        .pickerpopup {
+            display: block;
+        }
+    }
     
     .icon {
         display: flex;

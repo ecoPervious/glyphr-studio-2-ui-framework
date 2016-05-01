@@ -1,0 +1,35 @@
+@import 'Animations';
+
+.button {
+  // default button size
+  @extend .button.button-md;
+
+  &.button-sm {
+    padding: 3px 8px;
+  }
+
+  &.button-md {
+    padding: 5px 16px;
+  }
+
+  &.button-lg {
+    padding: 8px 26px;
+  }
+}
+
+.button {
+  font-family: OpenSansLight;
+  font-size: 14px;
+
+  &.project-button {
+    background-color: $blue-l90;
+    color: $blue-l60;
+    opacity: 0;
+    animation: fadein 0.2s forwards ease-in;
+    animation-delay: 0.8s;
+    &:hover {
+      background-color: $blue-l85;
+      color: $blue-l45;
+    }
+  }
+}
