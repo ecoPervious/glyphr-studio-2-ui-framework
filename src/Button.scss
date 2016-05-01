@@ -19,17 +19,17 @@
 
 .button {
   font-family: OpenSansLight;
-  font-size: 14px;
+  font-size: 12px;
 
   &.project-button {
-    background-color: $blue-l90;
+    background-color: $blue-l95;
     color: $blue-l60;
     opacity: 0;
-    animation: fadein 0.2s forwards ease-in;
-    animation-delay: 0.8s;
+    animation: fadein 0.4s forwards ease-in;
+    animation-delay: 1.6s;
     &:hover {
-      background-color: $blue-l85;
-      color: $blue-l45;
+      background-color: $offwhite;
+      color: $blue-l35;
     }
   }
 }

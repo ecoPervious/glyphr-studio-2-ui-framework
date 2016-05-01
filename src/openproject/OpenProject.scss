@@ -6,31 +6,10 @@
 @import '../Button';
 @import '../Animations';
 
-// .flexrows {
-//     display: flex;
-//     flex-direction: column;
-//     max-width: 100%;
-//     min-width: 100%;
-//     width:100%;
-//     max-height: 100%;
-//     min-height: 100%;
-//     height: 100%;
-//     & > * { 
-//         display: flex;
-//         flex: 1;
-//         text-align: center;
-//         padding: 0px auto;
-//     }
-
-// }
-
-// .flexcolumns {
-//     @extend .flexrows;
-//     flex-direction: row;
-// }
-
 .mod.mod-openpage {
-  background-color: $blue-l95;
+  background-color: $blue-l90;
+  opacity: 0;
+  animation: fadein 1.5s forwards ease-in-out;
   width: 100vw;
   height: 100vh;
   padding: 0px auto;
@@ -38,29 +17,34 @@
 
   .logo {
     margin: 0px auto;
+    width: 50vw;
+    min-width: 600px;
 
     svg {
-      max-width: 60vw;
+      width:100%;
       margin-top: 20vh;
-      margin-bottom: 2vh;
+      margin-bottom: 4vh;
+      opacity: 0;
+      animation: fadein 1.2s forwards ease-in;
     }
 
     .logopath {
       fill: transparent;
-      stroke-width: 0.1vh;
       stroke: $blue-l30;
     }
 
     .logopath_glyphr {
       @extend .logopath;
+      stroke-width: 0.08vw;
       animation-delay: 0.8s;
-      animation: pathoutline 1s forwards ease-in;
+      animation: pathoutline 1.6s forwards ease-in;
     }
 
     .logopath_studio {
       @extend .logopath;
-      animation-delay: 1s;
-      animation: pathoutline 0.8s forwards ease-in;
+      stroke-width: 0.06vw;
+      animation: pathoutline 0.4s forwards ease-in;
+      animation-delay: 1.4s;
     }
 
     #letter_G {
