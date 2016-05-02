@@ -4,6 +4,7 @@
 
 .group {
   display: inline-block;
+  vertical-align: top;
 
   &.display-group {
     & > * {

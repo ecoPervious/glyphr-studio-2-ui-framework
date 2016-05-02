@@ -3,6 +3,7 @@
 .button {
   // default button size
   @extend .button.button-md;
+  text-align: center;
 
   &.button-sm {
     padding: 3px 8px;
@@ -14,22 +15,5 @@
 
   &.button-lg {
     padding: 8px 26px;
-  }
-}
-
-.button {
-  font-family: OpenSansLight;
-  font-size: 12px;
-
-  &.project-button {
-    background-color: $blue-l95;
-    color: $blue-l60;
-    opacity: 0;
-    animation: fadein 0.4s forwards ease-in;
-    animation-delay: 1.6s;
-    &:hover {
-      background-color: $offwhite;
-      color: $blue-l35;
-    }
   }
 }

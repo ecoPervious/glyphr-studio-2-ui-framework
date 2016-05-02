@@ -6,28 +6,85 @@
 @import '../Button';
 @import '../Animations';
 
+
+
+
 .mod.mod-openpage {
-  background-color: $blue-l90;
-  opacity: 0;
-  animation: fadein 1.5s forwards ease-in-out;
   width: 100vw;
   height: 100vh;
   padding: 0px auto;
   text-align: center;
 
+  .background {
+    background-color: $blue-l55;
+    opacity: 0;
+    animation: fadein 2.0s forwards ease-in;
+    position: absolute;
+    top:0px;
+    left:0px;
+    width:100%;
+    height:100%;    
+  }
+  
+  .glyphrstudio-info {
+    text-align: right;
+    color: $blue-l90;
+    font-size: 8px;
+    margin-right: 20px;
+    margin-left: -80px;
+    line-height: 1.6em;
+    width: 275px;
+    opacity: 0;
+    animation: fadein 0.2s forwards ease-in;
+    animation-delay: 1.6s;
+      
+    a, a:hover, a:visited, a:active {
+      color: $blue-l90;
+      display: inline;
+    }
+    
+    h1 {
+      color: $blue-l85;
+      font-size: 16px;
+      margin: 4px 0px 10px 0px;
+    }
+  }
+  
+  .project-button {
+      // font-family: OpenSansLight;
+      font-size: 16px;
+      background-color: $blue-l90;
+      color: $blue-l60;
+      opacity: 0;
+      animation: fadein 0.3s forwards ease-in;
+      animation-delay: 1.75s;
+      &:hover {
+        background-color: $blue-l95;
+        color: $blue-l35;
+      }
+    }
+
+    svg {
+      width:100%;
+      margin-top: 20vh;
+      margin-bottom: 6vh;
+      opacity: 0;
+      animation: fadein 0.8s forwards ease-in;
+    }
+  
   .logo {
     margin: 0px auto;
     width: 50vw;
     min-width: 600px;
 
-    svg {
-      width:100%;
-      margin-top: 20vh;
-      margin-bottom: 4vh;
-      opacity: 0;
-      animation: fadein 1.2s forwards ease-in;
+    .logofill {
+        fill: $blue-l85;
+        stroke: transparent;
+        opacity: 0;
+        animation: fadein 0.4s forwards ease-in;
+        animation-delay: 1.4s;
     }
-
+    
     .logopath {
       fill: transparent;
       stroke: $blue-l30;
@@ -35,15 +92,15 @@
 
     .logopath_glyphr {
       @extend .logopath;
-      stroke-width: 0.08vw;
+      stroke-width: 1.4px;
       animation-delay: 0.8s;
-      animation: pathoutline 1.6s forwards ease-in;
+      animation: pathoutline 1.4s forwards ease-in;
     }
 
     .logopath_studio {
       @extend .logopath;
-      stroke-width: 0.06vw;
-      animation: pathoutline 0.4s forwards ease-in;
+      stroke-width: 1.2px;
+      animation: pathoutline 0.2s forwards ease-in;
       animation-delay: 1.4s;
     }
 
@@ -139,15 +196,6 @@
       @extend .logopath_studio;
       stroke-dasharray: 61px;
       stroke-dashoffset: 61px;
-    }
-  }
-
-  // mod overrides Button.scss
-  .group.button-group.display-group {
-    text-align: center;
-    & > button {
-      margin-left: auto;
-      margin-right: auto;
     }
   }
 }
