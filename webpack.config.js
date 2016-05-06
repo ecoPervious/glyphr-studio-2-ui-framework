@@ -4,7 +4,8 @@ module.exports = {
   entry: {
     glyphedit: "./src/glyphedit/entry.js",
     settings: "./src/settings/entry.js",
-    openproject: "./src/openproject/entry.js"
+    openproject: "./src/openproject/entry.js",
+    progress_spinner: "./src/progress_spinner/entry.js"
   },
   output: {
     path: path.join(__dirname, 'dist'),

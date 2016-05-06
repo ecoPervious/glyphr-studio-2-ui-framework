@@ -1,0 +1,60 @@
+@import '../Animations';
+@import '../Reset';
+@import '../Colors';
+
+
+$strokelength: 322;
+
+.spinner {
+  background-color: $blue-l95;
+  
+  g {
+    fill: transparent;
+    animation: pathoutline 2s linear infinite;
+    stroke-linecap: round;
+  }
+
+  .p1 { 
+    stroke: $blue-l30;
+    stroke-width: 2.8px;
+    animation-direction: reverse;
+    // animation-delay: 0; 
+  }
+  // .p2 { 
+  //   stroke: $blue-l50;
+  //   stroke-width: 2.4px;
+  //   animation-delay: 0.1s; 
+  // }
+  // .p3 { 
+  //   stroke: $blue-l70;
+  //   stroke-width: 2.2px;
+  //   animation-delay: 0.2s; 
+  // }
+  // .p4 { 
+  //   stroke: $blue-l90;
+  //   stroke-width: 2.0px;
+  //   animation-delay: 0.3s; 
+  // }
+}
+
+@keyframes pathoutline {
+
+  0% { 
+    stroke-dashoffset: $strokelength;
+    stroke-dasharray: $strokelength;
+  }
+  20% {
+    stroke-dashoffset: $strokelength * .13;
+    stroke-dasharray: ($strokelength * .37) ($strokelength * 1.5);
+  }
+  80% { 
+    stroke-dashoffset: $strokelength * .5;
+    stroke-dasharray: ($strokelength * .37) ($strokelength * 1.5);
+  }
+  100% { 
+    stroke-dashoffset: $strokelength * .83;
+    stroke-dasharray: $strokelength * 2;
+  }
+  
+}
+
