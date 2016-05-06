@@ -131,8 +131,8 @@
     .logopath_studio {
       @extend .logopath;
       stroke-width: 1.0px;
-      animation: pathoutline 1.0s forwards ease-in;
-      animation-delay: 0.6s;
+      animation: pathoutline 0.65s forwards ease-in;
+      animation-delay: 0.4s;
     }
 
     #letter_G {
