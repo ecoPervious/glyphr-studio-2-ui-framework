@@ -27,10 +27,11 @@
 <body>
 
     <script type="text/javascript" src="glyphedit.bundle.js"></script>
+    <script type="text/javascript" src="functions.js"></script>
 
     <div class="leftframe">
         
-        <div class="pickerheaderprimary">
+        <div class="pickerheader-primary" onclick="pickerpanel_show('pickerpanel-primary');">
             <div class="icon">
                 <svg style="width:20px; height:20px;"
                      x="0px" y="0px" width="50px" height="50px" viewBox="0 0 50 50" enable-background="new 0 0 50 50"  >
@@ -52,11 +53,18 @@
                     <polygon points="1,15.707 0.293,15 7.293,8 0.293,1 1,0.293 8.707,8"/>
                 </svg>
             </div>
-            <div class="pickerpopup">
-                <h2>hi</h2>
+            <div class="pickerpanel" id="pickerpanel-primary" style="display: none;">
+                <div class="panel-controls">
+                    <script>document.write(drawPanelControls());</script>
+                </div>
+                <div class="panel-content-pages">
+                    <button class="selected">Glyph Edit</button>
+                    <button>Settings</button>
+                    <button>Help</button>
+                </div>
             </div>
         </div>
-        <div class="pickerheadersecondary">
+        <div class="pickerheader-secondary" onclick="pickerpanel_show('pickerpanel-secondary');">
             <div class="icon">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px">
                   <!-- SAMPLE, we should draw the user's glyph here -->
@@ -64,21 +72,25 @@
                   <text x="3" y="13" font-size="16">G</text>
                 </svg>
             </div>
-            <div class="title">Latin Capital G Latin Capital G Latin Capital G</div>
+            <div class="title">Latin Capital G</div>
             <div class="chevron">
                 <svg
                      x="0px" y="0px" width="9px" height="16px" viewBox="0 0 9 16" enable-background="new 0 0 9 16"  >
                     <polygon points="1,15.707 0.293,15 7.293,8 0.293,1 1,0.293 8.707,8"/>
                 </svg>
             </div>
-            <div class="pickerpopup">
-                <h2>hi</h2>
+            <div class="pickerpanel-glyph" id="pickerpanel-secondary" style="display: none;">
+                <div class="panel-controls">
+                    <script>document.write(drawPanelControls());</script>
+                </div>
+                <div class="panel-content">
+                    <script>document.write(drawGlyphTiles());</script>
+                 </div>
             </div>
         </div>
-        <div class="pickerheadertertiary">
+        <div class="pickerheader-tertiary" onclick="pickerpanel_show('pickerpanel-tertiary');">
             <div class="icon">
-                <svg
-                     x="0px" y="0px" width="12px" height="12px" viewBox="0 0 12 12" enable-background="new 0 0 12 12"  >
+                <svg x="0px" y="0px" width="12px" height="12px" viewBox="0 0 12 12" enable-background="new 0 0 12 12"  >
                 <g>
                     <rect x="0" y="1" width="3" height="1"/>
                     <rect x="4" y="1" width="8" height="1"/>
@@ -97,18 +109,25 @@
             </div>
             <div class="title">Attributes</div>
             <div class="chevron">
-                <svg
-                     x="0px" y="0px" width="9px" height="16px" viewBox="0 0 9 16" enable-background="new 0 0 9 16"  >
+                <svg x="0px" y="0px" width="9px" height="16px" viewBox="0 0 9 16" enable-background="new 0 0 9 16"  >
                     <polygon points="1,15.707 0.293,15 7.293,8 0.293,1 1,0.293 8.707,8"/>
                 </svg>
             </div>
-            <div class="pickerpopup">
-                <h2>hi</h2>
+            <div class="pickerpanel" id="pickerpanel-tertiary" style="display: none;">
+                <div class="panel-controls">
+                    <script>document.write(drawPanelControls());</script>
+                </div>
+                <div class="panel-content-pages">
+                    <button class="selected">Attributes</button>
+                    <button>Shapes</button>
+                    <button>History</button>
+                    <button>View</button>
+                </div>
             </div>
         </div>
 
         <div class="panel">
-            <div class="panelcontent">
+            <div class="panel-content-leftframe" onclick="pickerpanel_hideAll();">
                 content content content content content content content content content<br/><br/>
                 content content content content content content content content content<br/><br/>
                 content content content content content content content content content<br/><br/>
@@ -140,11 +159,11 @@
                 content content content content content content content content content<br/><br/>
                 content content content content content content content content content<br/><br/>
             </div>
-        </div>
+        </div> 
 
     </div>
 
-    <div class="centerframe">
+    <div class="centerframe" onclick="pickerpanel_hideAll();">
         canvas goes here 
     </div>
     

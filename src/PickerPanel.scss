@@ -1,0 +1,52 @@
+@import 'Colors';
+@import 'Panel';
+
+.pickerpanel {
+  @extend .panel;
+
+  position: absolute;
+  z-index: 9999;
+  padding:0px;
+  min-width: 300px;  
+  border-left-style: solid;
+  border-left-width: 20px;
+}
+
+.pickerpanel-glyph {
+  @extend .pickerpanel;
+  width:50%;
+  height:90%;
+  
+  .glyphtile {
+    display: inline-block;
+    width: 50px;
+    height: 70px;
+    margin: 0px 10px 10px 0px;
+    border: 2px solid $offwhite;
+    
+    &:hover {
+      border: 2px solid $blue-l80;
+      cursor: pointer;
+    }
+    
+    .preview {
+      width: 46px;
+      height: 46px;
+      background-color: white;
+      color: $gray-l90;
+      padding-top:4px;
+      text-align: center;
+      font-size: 34px;
+    }
+    
+    .name {
+      height: 20px;
+      padding: 2px 0px 0px 4px;
+      background-color: $gray-l95;
+    }
+  }
+  
+  .glyphtile.selected {
+    border: 2px solid $blue-l50;
+  }
+}

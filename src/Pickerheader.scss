@@ -1,21 +1,10 @@
 @import 'Colors';
 @import 'Reset';
-@import 'PickerPopup';
+@import 'PickerPanel';
 
 .pickerheader {
 	display: flex;
 	flex-direction: row;
-
-    .pickerpopup {
-        @extend .pickerpopup;
-        display: none;
-    }
-
-    &:hover {
-        .pickerpopup {
-            display: block;
-        }
-    }
     
     .icon {
         display: flex;
@@ -23,6 +12,7 @@
         vertical-align: middle;
         height:100%;
         width:44px;
+        &:hover { cursor: pointer; }
         svg { margin: auto; }
     }
     
@@ -35,6 +25,7 @@
         text-align: left;
         height:100%;
         font-family: OpenSansLight;
+        &:hover { cursor: pointer; }
     }
     
     .chevron {
@@ -43,15 +34,12 @@
         vertical-align: middle;
         height:100%;
         width:44px;
-        
+        &:hover { cursor: pointer; }
         svg { margin: auto; }
     }
-
-    &:hover { cursor: pointer; }
 }
 
-
-.pickerheaderprimary {
+.pickerheader-primary {
     @extend .pickerheader;
     background-color: $blue-l80;
     height:44px;
@@ -71,9 +59,11 @@
     .chevron svg { fill: $blue-l70; }
     
     &:hover .chevron svg { fill: $blue-l35; }
+    
+    .pickerpanel { border-left-color: $blue-l80; }
 }
 
-.pickerheadersecondary {
+.pickerheader-secondary {
     @extend .pickerheader;
     background-color: $blue-l85;
     height:40px;
@@ -93,10 +83,11 @@
     .chevron svg { fill:$blue-l75; }
     
     &:hover .chevron svg { fill: $blue-l40; }
+    
+    .pickerpanel { border-left-color: $blue-l85; }
 }
 
-
-.pickerheadertertiary {
+.pickerheader-tertiary {
     @extend .pickerheader;
     background-color: $blue-l90;
     height:36px;
@@ -116,6 +107,8 @@
     .chevron svg { fill: $blue-l80; }
     
     &:hover .chevron svg { fill: $blue-l45; }
+    
+    .pickerpanel { border-left-color: $blue-l90; }
 }
 
 
