@@ -1,5 +1,6 @@
 @import 'Colors';
 @import 'Panel';
+@import 'Animations';
 
 .pickerpanel {
   @extend .panel;
@@ -7,15 +8,16 @@
   position: absolute;
   z-index: 9999;
   padding:0px;
-  min-width: 300px;  
+  min-width: 250px;  
   border-left-style: solid;
   border-left-width: 20px;
+	animation: 0.2s fadein;
 }
 
 .pickerpanel-glyph {
   @extend .pickerpanel;
-  width:50%;
-  height:90%;
+  max-width:50%;
+  max-height:90%;
   
   .glyphtile {
     display: inline-block;
@@ -23,6 +25,7 @@
     height: 70px;
     margin: 0px 10px 10px 0px;
     border: 2px solid $offwhite;
+    background-color: white;
     
     &:hover {
       border: 2px solid $blue-l80;
@@ -32,7 +35,6 @@
     .preview {
       width: 46px;
       height: 46px;
-      background-color: white;
       color: $gray-l90;
       padding-top:4px;
       text-align: center;
@@ -42,7 +44,7 @@
     .name {
       height: 20px;
       padding: 2px 0px 0px 4px;
-      background-color: $gray-l95;
+      border-top:1px solid $offwhite;
     }
   }
   

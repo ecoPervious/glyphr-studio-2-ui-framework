@@ -12,7 +12,7 @@
     background-color: transparent;
     display:block;
     width: 100%;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 
     button {
       height: 24px;
@@ -22,7 +22,7 @@
       font-size: 8px;
       color: $gray-l80;
       fill: $gray-l80;
-      border-radius: 0;
+      border-radius: 0 !important;
       
       &:hover {
         color: $blue-l90;
@@ -46,13 +46,14 @@
     button {
       display: block;
       width: 100%;
-      padding: 8px 4px 8px 28px;
+      padding: 6px 4px 6px 11px;
+      margin: 0px 0px 5px 0px;
       font-size: 1.2em;
       color: $gray-l50;
       text-align: left;
       background-color: $offwhite;
-      border-left: 4px solid $offwhite;
-      margin: 0px 0px 10px 0px;
+      border-left: 5px solid $offwhite;
+      border-radius: 0;
 
       &:hover {
         background-color: $blue-l95;
@@ -64,7 +65,7 @@
     
     button.selected {
       color: $blue-l60;
-      border-left: 4px solid $blue-l80;
+      border-left: 5px solid $blue-l80;
 
       &:hover {
         color: $blue-l60;
@@ -76,7 +77,7 @@
   
   .panel-content-pages-leftframe {
     @extend .panel-content-pages;
-    padding-top: 10px;
+    padding: 10px 4px 8px 28px;
   }
   
   .panel-content-leftframe {
