@@ -27,7 +27,7 @@ function drawPanelControls() {
     re += '</button>';
     re += '<button onclick="alert(\'popout panel to a new window\');">';
     re += '<svg x="0px" y="0px" width="12px" height="12px" viewBox="0 0 12 12" enable-background="new 0 0 12 12" xml:space="preserve">';
-    re += '<polygon points="3,0.6 3,2 9,2 1,10 1,11 2,11 10,3 10,8 11.4,8 11.4,0.6 "/>';
+    re += '<polygon points="4,0.6 4,2 9,2 1,10 1,11 2,11 10,3 10,8 11.4,8 11.4,0.6 "/>';
     re += '</svg>';
     re += '</button>';
     re += '<button onclick="event.stopPropagation(); pickerpanel_hideAll();">';
