@@ -2,10 +2,11 @@
 @import 'OpenSans';
 @import 'OpenSansLight';
 @import 'Reset';
-@import 'PickerHeader';
-@import 'PickerPanel';
-@import 'Panel';
 @import 'Animations';
+@import 'Panel';
+@import 'PanelHeader';
+@import 'PanelHeaderFlyout';
+@import 'PanelTray';
 
 .flexframe {
 	display: flex;
@@ -23,6 +24,8 @@ body {
 .leftframe {
 	@extend .flexframe;
     width:400px;
+	height: 100%;
+	height: 100vh;
     border-right: 1px solid $blue-l90;
     border-bottom: 2px solid $blue-l90;
 	animation: 0.5s fadein;

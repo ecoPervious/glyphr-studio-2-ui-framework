@@ -1,21 +1,21 @@
-function pickerpanel_hideAll() {
-    var p1 = document.getElementById('pickerpanel-primary');
-    var p2 = document.getElementById('pickerpanel-secondary');
-    var p3 = document.getElementById('pickerpanel-tertiary');
+function panelFlyout_hideAll() {
+    var p1 = document.getElementById('flyout-primary');
+    var p2 = document.getElementById('flyout-secondary');
+    var p3 = document.getElementById('flyout-tertiary');
     
     if(p1) p1.style.display = 'none';    
     if(p2) p2.style.display = 'none';    
     if(p3) p3.style.display = 'none';
     
-    console.log('pickerpanel_hideAll');
+    console.log('panelFlyout_hideAll');
 }
 
-function pickerpanel_show(id) {
-    pickerpanel_hideAll();
+function panelFlyout_show(id) {
+    panelFlyout_hideAll();
     var p = document.getElementById(id);
     if(p) p.style.display = 'flex';
     
-    console.log('pickerpanel_show: ' + id);
+    console.log('panelFlyout_show: ' + id);
 }
 
 function drawPanelControls() {
@@ -30,7 +30,7 @@ function drawPanelControls() {
     re += '<polygon points="4,0.6 4,2 9,2 1,10 1,11 2,11 10,3 10,8 11.4,8 11.4,0.6 "/>';
     re += '</svg>';
     re += '</button>';
-    re += '<button onclick="event.stopPropagation(); pickerpanel_hideAll();">';
+    re += '<button onclick="event.stopPropagation(); panelFlyout_hideAll();">';
     re += '<svg x="0px" y="0px" width="12px" height="12px" viewBox="0 0 12 12" enable-background="new 0 0 12 12"><polygon points="12,1 11,0 6,5 1,0 0,1 5,6 0,11 1,12 6,7 11,12 12,11 7,6 "/></svg>';
     re += '</button>';
     
@@ -52,8 +52,9 @@ function drawGlyphTiles() {
         glyphhex = basiclatin_order[g];
         glyphchar = String.fromCharCode(glyphhex);
         
-        if(glyphchar === 'G') re += '<div class="glyphtile selected"'
-        else re += '<div class="glyphtile"'
+        re += '<div onclick="panelFlyout_hideAll();" ';
+        if(glyphchar === 'G') re += 'class="glyphtile selected"'
+        else re += 'class="glyphtile"'
         
         re += 'title="';
         re += basiclatin_names[glyphhex] + '\n' + glyphhex;
